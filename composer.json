@@ -1,0 +1,54 @@
+{
+    "name": "alvarogomides/laravel-melhorenvio",
+    "description": "Pacote Laravel para integração via API com MelhorEnvio, plataforma omnichannel para envios no Brasil.",
+    "keywords": [
+        "alvarogomides",
+        "laravel-melhorenvio"
+    ],
+    "homepage": "https://github.com/alvarogomides/laravel-melhorenvio",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Álvaro Gomides",
+            "email": "al.gomides@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlvaroGomides\\LaravelMelhorenvio\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AlvaroGomides\\LaravelMelhorenvio\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AlvaroGomides\\LaravelMelhorenvio\\LaravelMelhorenvioServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMelhorenvio": "AlvaroGomides\\LaravelMelhorenvio\\LaravelMelhorenvioFacade"
+            }
+        }
+    }
+}
